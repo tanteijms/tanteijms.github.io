@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>反铁乐队 - 详细信息</title>
+    <title>E.M.M乐队 - 详细信息</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -199,7 +199,7 @@
             flex-shrink: 0;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
             .container {
                 padding: 20px 8px;
             }
@@ -216,50 +216,39 @@
                 <div class="nav-en">/tanteijms</div>
             </div>
             <div class="nav-item">
-                <a href="/about">关于</a>
+                <a href="/about.html">关于</a>
                 <div class="nav-en">/about</div>
             </div>
             <div class="nav-item">
-                <a href="/contact">联系</a>
+                <a href="/contact.html">联系</a>
                 <div class="nav-en">/contact</div>
             </div>
             <div class="nav-item">
-                <a href="/projects">项目</a>
+                <a href="/projects.html">项目</a>
                 <div class="nav-en">/projects</div>
             </div>
             <div class="nav-item">
-                <a href="/study">学习</a>
+                <a href="/study.html">学习</a>
                 <div class="nav-en">/study</div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <img class="band-avatar" src="assets/icon/AntiRonEF/AntiRonEF.jpg" alt="反铁乐队头像">
-        <h1>反铁乐队</h1>
+        <img class="band-avatar" src="assets/icon/E.M.M/E.M.M2.png" alt="E.M.M乐队头像">
+        <h1>E.M.M乐队</h1>
         <div class="band-info-list">
             <div class="band-info-item">
-                <span class="band-info-icon"><i class="bi bi-telephone"></i></span>
-                <span class="band-info-content">18706748684</span>
-            </div>
-            <div class="band-info-item">
-                <span class="band-info-icon"><i class="bi bi-envelope-at"></i></span>
-                <a class="band-info-link" href="mailto:tanteijmstrribbi@gmail.com">tanteijmstrribbi@gmail.com</a>
-            </div>
-            <div class="band-info-item">
-                <span class="band-info-icon"><i class="bi bi-bilibili"></i></span>
-                <a class="band-info-link"
-                    href="https://space.bilibili.com/3537115291846843?spm_id_from=333.337.search-card.all.click"
-                    target="_blank">B站主页</a>
+                <span class="band-info-icon"><i class="bi bi-person"></i></span>
+                <span class="band-info-content">吉他手</span>
             </div>
         </div>
         <div class="video-section">
             <div class="video-title">代表作</div>
             <a class="video-link"
-                href="https://www.bilibili.com/video/BV1BSzUY3Ez1/?spm_id_from=333.1387.homepage.video_card.click"
+                href="https://www.bilibili.com/video/BV1Bi62YKEbq/?spm_id_from=333.1387.homepage.video_card.click"
                 target="_blank">
-                <img class="video-cover" id="bili-cover" src="assets/icon/AntiRonEF/antironef-represent.jpg"
-                    alt="B站视频封面">
-                <div>【反铁乐队】代表作</div>
+                <img class="video-cover" id="bili-cover" src="assets/icon/E.M.M/emm-represent.jpg" alt="B站视频封面">
+                <div>【E.M.M乐队】代表作</div>
             </a>
         </div>
     </div>
@@ -283,19 +272,6 @@
             star.style.animationDuration = `${Math.random() * 2 + 1.5}s`;
             stars.appendChild(star);
         }
-        // 自动获取B站视频封面
-        fetch('https://api.bilibili.com/x/web-interface/view?bvid=BV1BSzUY3Ez1')
-            .then(res => res.json())
-            .then(data => {
-                if (data && data.data && data.data.pic) {
-                    document.getElementById('bili-cover').src = data.data.pic;
-                } else {
-                    document.getElementById('bili-cover').src = 'https://www.bilibili.com/favicon.ico';
-                }
-            })
-            .catch(() => {
-                document.getElementById('bili-cover').src = 'https://www.bilibili.com/favicon.ico';
-            });
     </script>
 </body>
 
