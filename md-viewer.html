@@ -34,10 +34,54 @@
             color: #ffd04b;
             border-radius: 4px;
         }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .nav-en {
+            font-size: 0.82em;
+            color: rgba(224, 230, 246, 0.55);
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+            line-height: 1.1;
+            margin-top: 2px;
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        nav {
+            gap: 18px !important;
+        }
     </style>
 </head>
 
 <body>
+    <nav>
+        <div class="nav-item">
+            <a href="/">首页</a>
+            <div class="nav-en">/</div>
+        </div>
+        <div class="nav-item">
+            <a href="#about">关于</a>
+            <div class="nav-en">/about</div>
+        </div>
+        <div class="nav-item">
+            <a href="/contact">联系</a>
+            <div class="nav-en">/contact</div>
+        </div>
+        <div class="nav-item">
+            <a href="/projects">项目</a>
+            <div class="nav-en">/projects</div>
+        </div>
+        <div class="nav-item">
+            <a href="/study">学习</a>
+            <div class="nav-en">/study</div>
+        </div>
+    </nav>
     <div class="markdown-body" id="md-content">加载中...</div>
     <script>
         // 获取 URL 参数
