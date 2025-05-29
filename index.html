@@ -10,28 +10,65 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: #f7f9fb;
-            color: #222;
+            background: #0a0a23;
+            color: #e0e6f6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 星空背景动画 */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 0.2;
+            }
         }
 
         header {
-            background: #2d8cf0;
+            background: rgba(10, 10, 35, 0.92);
             color: #fff;
-            padding: 20px 0 10px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 22px 0 12px 0;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+            z-index: 2;
+            position: relative;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 36px;
         }
 
         nav a {
-            color: #fff;
+            color: #e0e6f6;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1em;
+            letter-spacing: 1px;
             transition: color 0.2s;
         }
 
@@ -40,25 +77,59 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px auto 0 auto;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(45, 140, 240, 0.07);
-            padding: 40px 30px 30px 30px;
+            max-width: 480px;
+            margin: 60px auto 0 auto;
+            background: rgba(20, 24, 48, 0.92);
+            border-radius: 18px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.38);
+            padding: 48px 32px 36px 32px;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.38);
+            object-fit: cover;
+            border: 4px solid #23234a;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 0.7em;
+            background: #23234a;
+        }
+
+        .avatar:hover {
+            transform: scale(1.06);
+            box-shadow: 0 8px 32px #2d8cf0;
         }
 
         h1 {
-            color: #2d8cf0;
+            color: #ffd04b;
             margin-top: 0;
+            letter-spacing: 2px;
+            font-size: 2.2em;
+        }
+
+        p {
+            color: #e0e6f6;
+            font-size: 1.15em;
+            margin-bottom: 0;
         }
 
         footer {
             text-align: center;
-            color: #888;
-            font-size: 0.95em;
-            padding: 20px 0 10px 0;
-            margin-top: 40px;
+            color: #6c7a99;
+            font-size: 0.98em;
+            padding: 28px 0 16px 0;
+            margin-top: 60px;
+            z-index: 2;
+            position: relative;
+        }
+
+        a {
+            outline: none;
         }
 
         @media (max-width: 600px) {
@@ -74,6 +145,7 @@
 </head>
 
 <body>
+    <div class="stars" id="stars"></div>
     <header>
         <nav>
             <a href="#">首页</a>
@@ -82,13 +154,34 @@
         </nav>
     </header>
     <div class="container">
+        <a href="https://github.com/tanteijms" target="_blank"
+            style="display:inline-block;text-align:center;width:100%;margin-bottom:18px;">
+            <img src="https://github.com/tanteijms.png" alt="tanteijms头像" class="avatar">
+        </a>
         <h1>tanteijms</h1>
         <p>The Real Talent is the Resolute Aspirations.</p>
     </div>
     <footer>
-        &copy; 2024 我的个人网站 | 由 <a href="https://pages.github.com/" style="color:#2d8cf0;text-decoration:none;">GitHub
+        &copy; 2024 我的个人网站 | 由 <a href="https://pages.github.com/" style="color:#ffd04b;text-decoration:none;">GitHub
             Pages</a> 强力驱动
     </footer>
+    <script>
+        // 生成星空背景
+        const starCount = 120;
+        const stars = document.getElementById('stars');
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random() * 0.7 + 0.3;
+            star.style.animationDuration = `${Math.random() * 2 + 1.5}s`;
+            stars.appendChild(star);
+        }
+    </script>
 </body>
 
 </html>
