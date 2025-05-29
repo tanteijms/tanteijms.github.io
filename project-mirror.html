@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>文景方圆 - 项目信息镜像</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学习 | 探偵事務所</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         html,
         body {
@@ -22,11 +23,6 @@
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-        }
-
-        :lang(en),
-        .en-font {
-            font-family: Consolas, 'Fira Mono', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace;
         }
 
         .stars {
@@ -74,101 +70,6 @@
             gap: 18px !important;
         }
 
-        nav a {
-            color: #e0e6f6;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1em;
-            letter-spacing: 1px;
-            transition: color 0.2s;
-        }
-
-        nav a:hover {
-            color: #ffd04b;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 60px auto 0 auto;
-            background: rgba(20, 24, 48, 0.92);
-            border-radius: 18px;
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.38);
-            padding: 48px 32px 36px 32px;
-            z-index: 1;
-            position: relative;
-            flex: 1 0 auto;
-        }
-
-        h1 {
-            color: #ffd04b;
-            margin-top: 0;
-            letter-spacing: 2px;
-            font-size: 2em;
-            text-align: center;
-        }
-
-        .notes-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            justify-content: center;
-            margin-top: 32px;
-        }
-
-        .note-card {
-            background: rgba(30, 34, 60, 0.98);
-            border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
-            padding: 28px 24px 20px 24px;
-            width: 320px;
-            min-height: 120px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-
-        .note-card:hover {
-            box-shadow: 0 8px 32px #2d8cf0;
-            transform: translateY(-4px) scale(1.03);
-        }
-
-        .note-title {
-            color: #ffd04b;
-            font-size: 1.12em;
-            font-weight: 700;
-            margin-bottom: 0.5em;
-        }
-
-        .note-desc {
-            color: #e0e6f6;
-            font-size: 1em;
-            opacity: 0.85;
-        }
-
-        footer {
-            text-align: center;
-            color: #6c7a99;
-            font-size: 0.98em;
-            padding: 28px 0 16px 0;
-            margin-top: 60px;
-            z-index: 2;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        @media (max-width: 900px) {
-            .notes-list {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .note-card {
-                width: 90%;
-                min-width: 0;
-            }
-        }
-
         .nav-item {
             display: flex;
             flex-direction: column;
@@ -186,6 +87,80 @@
             pointer-events: none;
             user-select: none;
         }
+
+        .container {
+            max-width: 820px;
+            margin: 60px auto 0 auto;
+            background: rgba(20, 24, 48, 0.92);
+            border-radius: 18px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.38);
+            padding: 48px 32px 36px 32px;
+            z-index: 1;
+            position: relative;
+        }
+
+        h1 {
+            color: #ffd04b;
+            margin-top: 0;
+            letter-spacing: 2px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            color: #ffd04b;
+            font-size: 1.18em;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        ul {
+            margin: 0 0 0 18px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 1em;
+        }
+
+        .mirror-link {
+            color: #ffd04b;
+            text-decoration: none;
+            font-size: 1em;
+            word-break: break-all;
+        }
+
+        .mirror-link:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            color: #aaa;
+            font-size: 0.95em;
+            margin-top: 4px;
+        }
+
+        footer {
+            text-align: center;
+            color: #6c7a99;
+            font-size: 0.98em;
+            padding: 28px 0 16px 0;
+            margin-top: 60px;
+            z-index: 2;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                padding: 20px 8px;
+            }
+        }
     </style>
 </head>
 
@@ -198,37 +173,61 @@
                 <div class="nav-en">/tanteijms</div>
             </div>
             <div class="nav-item">
-                <a href="/about.html">关于</a>
+                <a href="/about">关于</a>
                 <div class="nav-en">/about</div>
             </div>
             <div class="nav-item">
-                <a href="/contact.html">联系</a>
+                <a href="/contact">联系</a>
                 <div class="nav-en">/contact</div>
             </div>
             <div class="nav-item">
-                <a href="/projects.html">项目</a>
+                <a href="/projects">项目</a>
                 <div class="nav-en">/projects</div>
             </div>
             <div class="nav-item">
-                <a href="/study.html">学习</a>
+                <a href="/study">学习</a>
                 <div class="nav-en">/study</div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <h1>学习</h1>
-        <div class="notes-list">
-            <a href="md-viewer.html?file=assets/cpp/pointsOnCpp.md" class="note-card note-card-link"
-                style="text-decoration:none;color:inherit;">
-                <div class="note-title">C++ 知识点总结</div>
-            </a>
-            <a href="md-viewer.html?file=assets/en_Business_English_and_International_Communication/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0.md"
-                class="note-card note-card-link" style="text-decoration:none;color:inherit;">
-                <div class="note-title">商务英语与国际交流 期中复习</div>
-            </a>
-            <!-- 你可以继续添加更多学习资料卡片 -->
-        </div>
-    </div>
+    <main class="container">
+        <h1>文景方圆：基于影视戏剧文本处理与AI建模的动画构建</h1>
+        <section>
+            <h2>项目简介</h2>
+            <p>
+                随着现代社会中科技与信息传输方式的高速发展，简单的文本表述已经无法满足人们的精神需求，更多的人开始将兴趣转向视觉艺术方面的展现。从短视频到电影，影视戏剧艺术相关的产业正蒸蒸日上。正因如此，对于影视戏剧类文本（舞台剧剧本，电影分镜脚本，传统戏剧剧本等）的编写与处理需求远超以往。<br>
+                本项目的目的为通过现代技术与机器学习相结合，使计算机可以基于简要的文本描述进行拓展，产出可视化程度极高的3D建模动画。剧本编写者可以基于生成的动画进行虚拟环境中的剧本预览，拍摄镜头预选及灯光测试，极大节约影视戏剧相关排练成本；个体用户可以通过该功能一键生成文本对应的专属视频，且由于通过3D建模进行，视频场景真实度远高于常规视频生成方式。
+            </p>
+        </section>
+        <section>
+            <h2>项目负责人</h2>
+            <ul>
+                <li>严漪硕（2023级 计算机学院 计算机类）</li>
+            </ul>
+        </section>
+        <section>
+            <h2>项目成员</h2>
+            <ul>
+                <li>陈雪松（2021级 国际学院 电信工程与管理）</li>
+                <li>张雨露（2023级 数字媒体与设计艺术学院 数字媒体艺术）</li>
+                <li>钱海天（1355级 校外学生统一学院 清华大学）</li>
+                <li>张馨元（1821级 校外学生统一学院 中国农业大学）</li>
+            </ul>
+        </section>
+        <section>
+            <h2>指导老师</h2>
+            <ul>
+                <li>郭凯（国际学院 高级工程师）</li>
+                <li>郝强（清华大学未来实验室 助理教授）</li>
+            </ul>
+        </section>
+        <section>
+            <h2>项目主页（校内网）</h2>
+            <a class="mirror-link" href="https://win.bupt.edu.cn/program.do?id=8437"
+                target="_blank">https://win.bupt.edu.cn/program.do?id=8437</a>
+            <div class="note">（仅限北邮校内网访问）</div>
+        </section>
+    </main>
     <footer>
         &copy; 2024 tanteijms© | 由 <a href="https://pages.github.com/"
             style="color:#ffd04b;text-decoration:none;">GitHub Pages</a> 强力驱动
