@@ -16,8 +16,8 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: #0a0a23;
-            color: #e0e6f6;
+            background: #f0f4f8;
+            color: #2c3e50;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -37,9 +37,9 @@
 
         .star {
             position: absolute;
-            background: white;
+            background: #cbd5e0;
             border-radius: 50%;
-            opacity: 0.8;
+            opacity: 0.3;
             animation: twinkle 2s infinite ease-in-out;
         }
 
@@ -47,19 +47,19 @@
 
             0%,
             100% {
-                opacity: 0.8;
+                opacity: 0.3;
             }
 
             50% {
-                opacity: 0.2;
+                opacity: 0.1;
             }
         }
 
         header {
-            background: rgba(10, 10, 35, 0.92);
-            color: #fff;
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
             padding: 22px 0 12px 0;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
             z-index: 2;
             position: relative;
         }
@@ -79,8 +79,8 @@
 
         .nav-en {
             font-size: 0.82em;
-            color: rgba(224, 230, 246, 0.55);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+            color: rgba(44, 62, 80, 0.45);
+            text-shadow: none;
             line-height: 1.1;
             margin-top: 2px;
             letter-spacing: 0.5px;
@@ -96,9 +96,9 @@
             gap: 48px;
             max-width: 980px;
             margin: 60px auto 0 auto;
-            background: rgba(20, 24, 48, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 18px;
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
             padding: 48px 32px 36px 32px;
             z-index: 1;
             position: relative;
@@ -112,19 +112,20 @@
         }
 
         .about-block {
-            background: rgba(30, 34, 60, 0.98);
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 22px 24px 18px 24px;
             margin-bottom: 0;
             display: flex;
             align-items: flex-start;
             gap: 18px;
+            border: 1px solid #e2e8f0;
         }
 
         .about-block .block-icon {
             font-size: 1.7em;
-            color: #ffd04b;
+            color: #3498db;
             margin-right: 10px;
             min-width: 32px;
         }
@@ -135,8 +136,8 @@
             border-radius: 50%;
             object-fit: cover;
             margin-right: 10px;
-            background: #23234a;
-            border: 2px solid #23234a;
+            background: #e2e8f0;
+            border: 2px solid #e2e8f0;
         }
 
         .block-content {
@@ -146,18 +147,18 @@
         .block-title {
             font-weight: 700;
             font-size: 1.08em;
-            color: #ffd04b;
+            color: #3498db;
             margin-bottom: 2px;
         }
 
         .block-desc {
-            color: #e0e6f6;
+            color: #34495e;
             font-size: 1em;
             opacity: 0.92;
         }
 
         .block-link {
-            color: #ffd04b;
+            color: #3498db;
             text-decoration: none;
             font-size: 0.98em;
             margin-left: 6px;
@@ -179,15 +180,15 @@
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
             object-fit: cover;
-            border: 4px solid #23234a;
-            background: #23234a;
+            border: 4px solid #e2e8f0;
+            background: #e2e8f0;
         }
 
         .about-avatar .nickname {
             margin-top: 18px;
-            color: #ffd04b;
+            color: #3498db;
             font-size: 1.25em;
             font-weight: 700;
             letter-spacing: 1px;
@@ -208,7 +209,7 @@
 
         footer {
             text-align: center;
-            color: #6c7a99;
+            color: #7f8c8d;
             font-size: 0.98em;
             padding: 28px 0 16px 0;
             margin-top: 60px;
@@ -218,25 +219,26 @@
         }
 
         .about-block-link:hover {
-            box-shadow: 0 8px 32px #2d8cf0;
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.3);
             transform: translateY(-2px) scale(1.02);
             cursor: pointer;
-            background: rgba(40, 54, 90, 0.98);
+            background: #f7fafc;
         }
 
         .about-summary {
-            background: rgba(30, 34, 60, 0.98);
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 22px 28px 18px 28px;
             margin-bottom: 32px;
             font-size: 1.08em;
-            color: #e0e6f6;
+            color: #34495e;
             line-height: 1.8;
+            border: 1px solid #e2e8f0;
         }
 
         .about-section-title {
-            color: #ffd04b;
+            color: #3498db;
             font-size: 1.18em;
             font-weight: 700;
             margin: 36px 0 18px 0;
@@ -250,23 +252,23 @@
     <header>
         <nav>
             <div class="nav-item">
-                <a href="/">首页</a>
+                <a href="../index.html">主页</a>
                 <div class="nav-en">/tanteijms</div>
             </div>
             <div class="nav-item">
-                <a href="/about.html">关于</a>
+                <a href="about.html">关于</a>
                 <div class="nav-en">/about</div>
             </div>
             <div class="nav-item">
-                <a href="/contact.html">联系</a>
+                <a href="contact.html">联系</a>
                 <div class="nav-en">/contact</div>
             </div>
             <div class="nav-item">
-                <a href="/projects.html">项目</a>
+                <a href="projects.html">项目</a>
                 <div class="nav-en">/projects</div>
             </div>
             <div class="nav-item">
-                <a href="/study.html">学习</a>
+                <a href="study.html">学习</a>
                 <div class="nav-en">/study</div>
             </div>
         </nav>
@@ -289,7 +291,7 @@
                     <div class="block-title">"文景方圆"项目负责人</div>
                     <div class="block-desc">
                         基于影视戏剧文本处理与AI建模的动画构建。通过现代技术与机器学习结合，实现文本到3D动画的自动生成，服务剧本预览、镜头预选等场景，提升影视戏剧创作效率。
-                        <span style="color:#ffd04b;font-size:0.98em;margin-left:6px;">点击查看详细</span>
+                        <span style="color:#3498db;font-size:0.98em;margin-left:6px;">点击查看详细</span>
                     </div>
                 </div>
             </a>
@@ -307,14 +309,14 @@
             </div>
             <div class="about-section-title">音乐 Music</div>
             <a href="antironef.html" class="about-block about-block-link" style="text-decoration:none;color:inherit;">
-                <img class="block-avatar" src="assets/icon/AntiRonEF/AntiRonEF.jpg" alt="反铁乐队头像">
+                <img class="block-avatar" src="../assets/images/AntiRonEF/AntiRonEF.jpg" alt="反铁乐队头像">
                 <div class="block-content">
                     <div class="block-title">反铁乐队 鼓手</div>
                     <div class="block-desc">备战西安BanG Dream Only 1中</div>
                 </div>
             </a>
             <a href="emm.html" class="about-block about-block-link" style="text-decoration:none;color:inherit;">
-                <img class="block-avatar" src="assets/icon/E.M.M/E.M.M2.png" alt="E.M.M乐队头像">
+                <img class="block-avatar" src="../assets/images/E.M.M/E.M.M2.png" alt="E.M.M乐队头像">
                 <div class="block-content">
                     <div class="block-title">E.M.M乐队 吉他手</div>
                     <div class="block-desc">E.M.M乐队吉他手</div>
@@ -323,7 +325,7 @@
             <div class="about-section-title">社交主页 Social</div>
             <a href="https://space.bilibili.com/327288488?spm_id_from=333.1387.0.0" class="about-block about-block-link"
                 style="text-decoration:none;color:inherit;" target="_blank">
-                <img class="block-avatar" src="assets/icon/bilibili-avatar.png" alt="B站头像">
+                <img class="block-avatar" src="../assets/images/bilibili-avatar.png" alt="B站头像">
                 <div class="block-content">
                     <div class="block-title">B站主页</div>
                     <div class="block-desc">点击进入我的B站主页</div>
@@ -337,7 +339,7 @@
     </div>
     <footer>
         &copy; 2024 tanteijms© | 由 <a href="https://pages.github.com/"
-            style="color:#ffd04b;text-decoration:none;">GitHub Pages</a> 强力驱动
+            style="color:#3498db;text-decoration:none;">GitHub Pages</a> 强力驱动
     </footer>
     <script>
         // 生成星空背景

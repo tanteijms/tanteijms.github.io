@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学习 | 探偵事務所</title>
+    <title>项目 | 探偵事務所</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         html,
@@ -15,8 +15,8 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: #0a0a23;
-            color: #e0e6f6;
+            background: #f0f4f8;
+            color: #2c3e50;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -41,9 +41,9 @@
 
         .star {
             position: absolute;
-            background: white;
+            background: #cbd5e0;
             border-radius: 50%;
-            opacity: 0.8;
+            opacity: 0.3;
             animation: twinkle 2s infinite ease-in-out;
         }
 
@@ -51,19 +51,19 @@
 
             0%,
             100% {
-                opacity: 0.8;
+                opacity: 0.3;
             }
 
             50% {
-                opacity: 0.2;
+                opacity: 0.1;
             }
         }
 
         header {
-            background: rgba(10, 10, 35, 0.92);
-            color: #fff;
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
             padding: 22px 0 12px 0;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
             z-index: 2;
             position: relative;
         }
@@ -75,7 +75,7 @@
         }
 
         nav a {
-            color: #e0e6f6;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1em;
@@ -84,15 +84,15 @@
         }
 
         nav a:hover {
-            color: #ffd04b;
+            color: #3498db;
         }
 
         .container {
             max-width: 800px;
             margin: 60px auto 0 auto;
-            background: rgba(20, 24, 48, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 18px;
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
             padding: 48px 32px 36px 32px;
             z-index: 1;
             position: relative;
@@ -100,14 +100,14 @@
         }
 
         h1 {
-            color: #ffd04b;
+            color: #3498db;
             margin-top: 0;
             letter-spacing: 2px;
             font-size: 2em;
             text-align: center;
         }
 
-        .notes-list {
+        .projects-list {
             display: flex;
             flex-wrap: wrap;
             gap: 32px;
@@ -115,40 +115,41 @@
             margin-top: 32px;
         }
 
-        .note-card {
-            background: rgba(30, 34, 60, 0.98);
+        .project-card {
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 28px 24px 20px 24px;
-            width: 320px;
-            min-height: 120px;
+            width: 260px;
+            min-height: 140px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             transition: box-shadow 0.2s, transform 0.2s;
+            border: 1px solid #e2e8f0;
         }
 
-        .note-card:hover {
-            box-shadow: 0 8px 32px #2d8cf0;
+        .project-card:hover {
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.3);
             transform: translateY(-4px) scale(1.03);
         }
 
-        .note-title {
-            color: #ffd04b;
-            font-size: 1.12em;
+        .project-title {
+            color: #3498db;
+            font-size: 1.15em;
             font-weight: 700;
             margin-bottom: 0.5em;
         }
 
-        .note-desc {
-            color: #e0e6f6;
+        .project-desc {
+            color: #34495e;
             font-size: 1em;
             opacity: 0.85;
         }
 
         footer {
             text-align: center;
-            color: #6c7a99;
+            color: #7f8c8d;
             font-size: 0.98em;
             padding: 28px 0 16px 0;
             margin-top: 60px;
@@ -158,12 +159,12 @@
         }
 
         @media (max-width: 900px) {
-            .notes-list {
+            .projects-list {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .note-card {
+            .project-card {
                 width: 90%;
                 min-width: 0;
             }
@@ -178,8 +179,8 @@
 
         .nav-en {
             font-size: 0.82em;
-            color: rgba(224, 230, 246, 0.55);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+            color: rgba(44, 62, 80, 0.45);
+            text-shadow: none;
             line-height: 1.1;
             margin-top: 2px;
             letter-spacing: 0.5px;
@@ -194,44 +195,47 @@
     <header>
         <nav>
             <div class="nav-item">
-                <a href="/">首页</a>
+                <a href="../index.html">主页</a>
                 <div class="nav-en">/tanteijms</div>
             </div>
             <div class="nav-item">
-                <a href="/about.html">关于</a>
+                <a href="about.html">关于</a>
                 <div class="nav-en">/about</div>
             </div>
             <div class="nav-item">
-                <a href="/contact.html">联系</a>
+                <a href="contact.html">联系</a>
                 <div class="nav-en">/contact</div>
             </div>
             <div class="nav-item">
-                <a href="/projects.html">项目</a>
+                <a href="projects.html">项目</a>
                 <div class="nav-en">/projects</div>
             </div>
             <div class="nav-item">
-                <a href="/study.html">学习</a>
+                <a href="study.html">学习</a>
                 <div class="nav-en">/study</div>
             </div>
         </nav>
     </header>
     <div class="container">
-        <h1>学习</h1>
-        <div class="notes-list">
-            <a href="md-viewer.html?file=assets/file/cpp/pointsOnCpp.md" class="note-card note-card-link"
-                style="text-decoration:none;color:inherit;">
-                <div class="note-title">C++ 知识点总结</div>
-            </a>
-            <a href="md-viewer.html?file=assets/file/en_Business_English_and_International_Communication/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0.md"
-                class="note-card note-card-link" style="text-decoration:none;color:inherit;">
-                <div class="note-title">商务英语与国际交流 期中复习</div>
-            </a>
-            <!-- 你可以继续添加更多学习资料卡片 -->
+        <h1>我的项目</h1>
+        <div class="projects-list">
+            <div class="project-card">
+                <div class="project-title">项目名称 1</div>
+                <div class="project-desc">这里是项目描述占位内容。</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">项目名称 2</div>
+                <div class="project-desc">这里是项目描述占位内容。</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">项目名称 3</div>
+                <div class="project-desc">这里是项目描述占位内容。</div>
+            </div>
         </div>
     </div>
     <footer>
         &copy; 2024 tanteijms© | 由 <a href="https://pages.github.com/"
-            style="color:#ffd04b;text-decoration:none;">GitHub Pages</a> 强力驱动
+            style="color:#3498db;text-decoration:none;">GitHub Pages</a> 强力驱动
     </footer>
     <script>
         // 生成星空背景

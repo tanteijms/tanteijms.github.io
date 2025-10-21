@@ -8,8 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body {
-            background: #181828;
-            color: #e0e6f6;
+            background: #f0f4f8;
+            color: #2c3e50;
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0 10px;
@@ -18,21 +18,34 @@
         .markdown-body {
             max-width: 900px;
             margin: 40px auto;
-            background: rgba(30, 34, 60, 0.98);
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 32px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3 {
+            color: #3498db;
+        }
+
+        .markdown-body p,
+        .markdown-body li {
+            color: #2c3e50;
         }
 
         a {
-            color: #ffd04b;
+            color: #3498db;
         }
 
         pre,
         code {
-            background: #23234a;
-            color: #ffd04b;
+            background: #f7fafc;
+            color: #2d3748;
             border-radius: 4px;
+            border: 1px solid #e2e8f0;
         }
 
         .nav-item {
@@ -44,8 +57,8 @@
 
         .nav-en {
             font-size: 0.82em;
-            color: rgba(224, 230, 246, 0.55);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+            color: rgba(44, 62, 80, 0.45);
+            text-shadow: none;
             line-height: 1.1;
             margin-top: 2px;
             letter-spacing: 0.5px;
@@ -55,6 +68,23 @@
 
         nav {
             gap: 18px !important;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #3498db;
         }
     </style>
 </head>
@@ -62,23 +92,23 @@
 <body>
     <nav>
         <div class="nav-item">
-            <a href="/">首页</a>
+            <a href="../index.html">主页</a>
             <div class="nav-en">/tanteijms</div>
         </div>
         <div class="nav-item">
-            <a href="/about.html">关于</a>
+            <a href="about.html">关于</a>
             <div class="nav-en">/about</div>
         </div>
         <div class="nav-item">
-            <a href="/contact.html">联系</a>
+            <a href="contact.html">联系</a>
             <div class="nav-en">/contact</div>
         </div>
         <div class="nav-item">
-            <a href="/projects.html">项目</a>
+            <a href="projects.html">项目</a>
             <div class="nav-en">/projects</div>
         </div>
         <div class="nav-item">
-            <a href="/study.html">学习</a>
+            <a href="study.html">学习</a>
             <div class="nav-en">/study</div>
         </div>
     </nav>

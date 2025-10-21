@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习 | 探偵事務所</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f0f4f8;
+            color: #2c3e50;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        :lang(en),
+        .en-font {
+            font-family: Consolas, 'Fira Mono', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: #cbd5e0;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: twinkle 2s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.1;
+            }
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
+            padding: 22px 0 12px 0;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+            z-index: 2;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 18px !important;
+        }
+
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+            padding: 48px 32px 36px 32px;
+            z-index: 1;
+            position: relative;
+            flex: 1 0 auto;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-top: 0;
+            letter-spacing: 2px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .category-section {
+            margin-bottom: 48px;
+        }
+
+        .category-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-title {
+            color: #2c3e50;
+            font-size: 1.35em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-icon {
+            font-size: 1.2em;
+        }
+
+        .notes-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: flex-start;
+        }
+
+        .note-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            padding: 24px 20px 18px 20px;
+            width: calc(50% - 12px);
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: box-shadow 0.2s, transform 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .note-card:hover {
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.3);
+            transform: translateY(-4px) scale(1.03);
+        }
+
+        .note-title {
+            color: #3498db;
+            font-size: 1.12em;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        .note-desc {
+            color: #34495e;
+            font-size: 1em;
+            opacity: 0.85;
+        }
+
+        footer {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.98em;
+            padding: 28px 0 16px 0;
+            margin-top: 60px;
+            z-index: 2;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 900px) {
+            .notes-list {
+                flex-direction: column;
+            }
+
+            .note-card {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .category-title {
+                font-size: 1.2em;
+            }
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .nav-en {
+            font-size: 0.82em;
+            color: rgba(44, 62, 80, 0.45);
+            text-shadow: none;
+            line-height: 1.1;
+            margin-top: 2px;
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars" id="stars"></div>
+    <header>
+        <nav>
+            <div class="nav-item">
+                <a href="../index.html">主页</a>
+                <div class="nav-en">/tanteijms</div>
+            </div>
+            <div class="nav-item">
+                <a href="about.html">关于</a>
+                <div class="nav-en">/about</div>
+            </div>
+            <div class="nav-item">
+                <a href="contact.html">联系</a>
+                <div class="nav-en">/contact</div>
+            </div>
+            <div class="nav-item">
+                <a href="projects.html">项目</a>
+                <div class="nav-en">/projects</div>
+            </div>
+            <div class="nav-item">
+                <a href="study.html">学习</a>
+                <div class="nav-en">/study</div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>学习笔记</h1>
+
+        <!-- 人工智能分类 -->
+        <div class="category-section">
+            <div class="category-title">
+                <span class="category-icon">🤖</span>
+                <span>人工智能</span>
+            </div>
+            <div class="notes-list">
+                <a href="md-viewer.html?file=../documents/ai/qwen%E6%B7%B7%E5%90%88%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%A8%A1%E5%9E%8B.md"
+                    class="note-card note-card-link" style="text-decoration:none;color:inherit;">
+                    <div class="note-title">Qwen 混合注意力模型</div>
+                    <div class="note-desc">Qwen3-Next 的混合注意力架构详解</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 编程语言分类 -->
+        <div class="category-section">
+            <div class="category-title">
+                <span class="category-icon">💻</span>
+                <span>编程语言</span>
+            </div>
+            <div class="notes-list">
+                <a href="md-viewer.html?file=../documents/cpp/pointsOnCpp.md" class="note-card note-card-link"
+                    style="text-decoration:none;color:inherit;">
+                    <div class="note-title">C++ 知识点总结</div>
+                    <div class="note-desc">C++ 编程核心知识点整理</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 网络技术分类 -->
+        <div class="category-section">
+            <div class="category-title">
+                <span class="category-icon">🌐</span>
+                <span>网络技术</span>
+            </div>
+            <div class="notes-list">
+                <a href="md-viewer.html?file=../documents/network/GNS3%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE.md"
+                    class="note-card note-card-link" style="text-decoration:none;color:inherit;">
+                    <div class="note-title">GNS3 配置指南</div>
+                    <div class="note-desc">Win11家庭版在VMware里启动GNS3虚拟机报错解决方案</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 开发工具分类 -->
+        <div class="category-section">
+            <div class="category-title">
+                <span class="category-icon">🛠️</span>
+                <span>开发工具</span>
+            </div>
+            <div class="notes-list">
+                <a href="md-viewer.html?file=../documents/development/Apache_license2.0.md"
+                    class="note-card note-card-link" style="text-decoration:none;color:inherit;">
+                    <div class="note-title">Apache License 2.0</div>
+                    <div class="note-desc">Apache 开源许可证详解</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 课程学习分类 -->
+        <div class="category-section">
+            <div class="category-title">
+                <span class="category-icon">📚</span>
+                <span>课程学习</span>
+            </div>
+            <div class="notes-list">
+                <a href="md-viewer.html?file=../documents/en_Business_English_and_International_Communication/%E6%9C%9F%E4%B8%AD%E5%A4%8D%E4%B9%A0.md"
+                    class="note-card note-card-link" style="text-decoration:none;color:inherit;">
+                    <div class="note-title">商务英语与国际交流</div>
+                    <div class="note-desc">期中复习资料</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 tanteijms© | 由 <a href="https://pages.github.com/"
+            style="color:#3498db;text-decoration:none;">GitHub Pages</a> 强力驱动
+    </footer>
+    <script>
+        // 生成星空背景
+        const starCount = 120;
+        const stars = document.getElementById('stars');
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random() * 0.7 + 0.3;
+            star.style.animationDuration = `${Math.random() * 2 + 1.5}s`;
+            stars.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>

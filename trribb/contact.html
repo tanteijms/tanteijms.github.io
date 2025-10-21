@@ -16,8 +16,8 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: #0a0a23;
-            color: #e0e6f6;
+            background: #f0f4f8;
+            color: #2c3e50;
             min-height: 100vh;
             position: relative;
             overflow-x: hidden;
@@ -37,9 +37,9 @@
 
         .star {
             position: absolute;
-            background: white;
+            background: #cbd5e0;
             border-radius: 50%;
-            opacity: 0.8;
+            opacity: 0.3;
             animation: twinkle 2s infinite ease-in-out;
         }
 
@@ -47,19 +47,19 @@
 
             0%,
             100% {
-                opacity: 0.8;
+                opacity: 0.3;
             }
 
             50% {
-                opacity: 0.2;
+                opacity: 0.1;
             }
         }
 
         header {
-            background: rgba(10, 10, 35, 0.92);
-            color: #fff;
+            background: rgba(255, 255, 255, 0.95);
+            color: #2c3e50;
             padding: 22px 0 12px 0;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
             z-index: 2;
             position: relative;
         }
@@ -71,7 +71,7 @@
         }
 
         nav a {
-            color: #e0e6f6;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1em;
@@ -80,15 +80,15 @@
         }
 
         nav a:hover {
-            color: #ffd04b;
+            color: #3498db;
         }
 
         .container {
             max-width: 480px;
             margin: 60px auto 0 auto;
-            background: rgba(20, 24, 48, 0.92);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 18px;
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.38);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
             padding: 48px 32px 36px 32px;
             z-index: 1;
             position: relative;
@@ -96,7 +96,7 @@
         }
 
         h1 {
-            color: #ffd04b;
+            color: #3498db;
             margin-top: 0;
             letter-spacing: 2px;
             font-size: 2em;
@@ -113,22 +113,23 @@
         .contact-card {
             display: flex;
             align-items: center;
-            background: rgba(30, 34, 60, 0.98);
+            background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             padding: 22px 24px;
             gap: 18px;
             transition: box-shadow 0.2s, transform 0.2s;
+            border: 1px solid #e2e8f0;
         }
 
         .contact-card:hover {
-            box-shadow: 0 8px 32px #2d8cf0;
+            box-shadow: 0 8px 32px rgba(52, 152, 219, 0.3);
             transform: translateY(-2px) scale(1.02);
         }
 
         .contact-icon {
             font-size: 2.1em;
-            color: #ffd04b;
+            color: #3498db;
             min-width: 38px;
         }
 
@@ -141,12 +142,12 @@
             font-weight: 700;
             font-size: 1.08em;
             margin-bottom: 2px;
-            color: #ffd04b;
+            color: #3498db;
         }
 
         .contact-link,
         .contact-mail {
-            color: #e0e6f6;
+            color: #34495e;
             text-decoration: none;
             font-size: 1em;
             word-break: break-all;
@@ -155,12 +156,12 @@
 
         .contact-link:hover,
         .contact-mail:hover {
-            color: #ffd04b;
+            color: #3498db;
         }
 
         footer {
             text-align: center;
-            color: #6c7a99;
+            color: #7f8c8d;
             font-size: 0.98em;
             padding: 28px 0 16px 0;
             margin-top: 60px;
@@ -184,8 +185,8 @@
 
         .nav-en {
             font-size: 0.82em;
-            color: rgba(224, 230, 246, 0.55);
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+            color: rgba(44, 62, 80, 0.45);
+            text-shadow: none;
             line-height: 1.1;
             margin-top: 2px;
             letter-spacing: 0.5px;
@@ -200,23 +201,23 @@
     <header>
         <nav>
             <div class="nav-item">
-                <a href="/">首页</a>
+                <a href="../index.html">主页</a>
                 <div class="nav-en">/tanteijms</div>
             </div>
             <div class="nav-item">
-                <a href="/about.html">关于</a>
+                <a href="about.html">关于</a>
                 <div class="nav-en">/about</div>
             </div>
             <div class="nav-item">
-                <a href="/contact.html">联系</a>
+                <a href="contact.html">联系</a>
                 <div class="nav-en">/contact</div>
             </div>
             <div class="nav-item">
-                <a href="/projects.html">项目</a>
+                <a href="projects.html">项目</a>
                 <div class="nav-en">/projects</div>
             </div>
             <div class="nav-item">
-                <a href="/study.html">学习</a>
+                <a href="study.html">学习</a>
                 <div class="nav-en">/study</div>
             </div>
         </nav>
@@ -249,7 +250,7 @@
     </div>
     <footer>
         &copy; 2024 tanteijms© | 由 <a href="https://pages.github.com/"
-            style="color:#ffd04b;text-decoration:none;">GitHub Pages</a> 强力驱动
+            style="color:#3498db;text-decoration:none;">GitHub Pages</a> 强力驱动
     </footer>
     <script>
         // 生成星空背景
