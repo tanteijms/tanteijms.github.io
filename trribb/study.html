@@ -15,7 +15,7 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: #f0f4f8;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
             color: #2c3e50;
             min-height: 100vh;
             position: relative;
@@ -29,7 +29,7 @@
             font-family: Consolas, 'Fira Mono', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace;
         }
 
-        .stars {
+        .bubbles {
             position: fixed;
             top: 0;
             left: 0;
@@ -37,25 +37,56 @@
             bottom: 0;
             z-index: 0;
             pointer-events: none;
+            overflow: hidden;
         }
 
-        .star {
+        .bubble {
             position: absolute;
-            background: #cbd5e0;
             border-radius: 50%;
-            opacity: 0.3;
-            animation: twinkle 2s infinite ease-in-out;
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.15), rgba(155, 89, 182, 0.15));
+            animation: float 20s infinite ease-in-out;
         }
 
-        @keyframes twinkle {
+        .bubble:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
 
-            0%,
-            100% {
-                opacity: 0.3;
+        .bubble:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 4s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 180px;
+            height: 180px;
+            top: 40%;
+            right: 5%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0.2;
             }
-
             50% {
-                opacity: 0.1;
+                transform: translateY(-20px) translateX(10px);
+                opacity: 0.4;
             }
         }
 
@@ -77,23 +108,33 @@
         nav a {
             color: #2c3e50;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1em;
-            letter-spacing: 1px;
-            transition: color 0.2s;
+            font-weight: 600;
+            font-size: 1em;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: transparent;
         }
 
         nav a:hover {
-            color: #3498db;
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        nav a.active {
+            background: #3498db;
+            color: white;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 60px auto 0 auto;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 18px;
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-            padding: 48px 32px 36px 32px;
+            padding: 48px 40px 36px 40px;
             z-index: 1;
             position: relative;
             flex: 1 0 auto;
@@ -217,29 +258,19 @@
 </head>
 
 <body>
-    <div class="stars" id="stars"></div>
+    <div class="bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
     <header>
         <nav>
-            <div class="nav-item">
-                <a href="../index.html">主页</a>
-                <div class="nav-en">/tanteijms</div>
-            </div>
-            <div class="nav-item">
-                <a href="about.html">关于</a>
-                <div class="nav-en">/about</div>
-            </div>
-            <div class="nav-item">
-                <a href="contact.html">联系</a>
-                <div class="nav-en">/contact</div>
-            </div>
-            <div class="nav-item">
-                <a href="projects.html">项目</a>
-                <div class="nav-en">/projects</div>
-            </div>
-            <div class="nav-item">
-                <a href="study.html">学习</a>
-                <div class="nav-en">/study</div>
-            </div>
+            <a href="../index.html">主页</a>
+            <a href="about.html">关于</a>
+            <a href="projects.html">项目</a>
+            <a href="study.html" class="active">学习</a>
+            <a href="contact.html">联系</a>
         </nav>
     </header>
     <div class="container">
@@ -324,23 +355,6 @@
         &copy; 2024 tanteijms© | 由 <a href="https://pages.github.com/"
             style="color:#3498db;text-decoration:none;">GitHub Pages</a> 强力驱动
     </footer>
-    <script>
-        // 生成星空背景
-        const starCount = 120;
-        const stars = document.getElementById('stars');
-        for (let i = 0; i < starCount; i++) {
-            const star = document.createElement('div');
-            star.className = 'star';
-            const size = Math.random() * 2 + 1;
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.opacity = Math.random() * 0.7 + 0.3;
-            star.style.animationDuration = `${Math.random() * 2 + 1.5}s`;
-            stars.appendChild(star);
-        }
-    </script>
 </body>
 
 </html>
